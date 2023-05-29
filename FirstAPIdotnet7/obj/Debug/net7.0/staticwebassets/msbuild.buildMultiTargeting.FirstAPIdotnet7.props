@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FirstAPIdotnet7.props" />
+</Project>
