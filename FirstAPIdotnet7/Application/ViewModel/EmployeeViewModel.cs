@@ -1,4 +1,4 @@
-﻿namespace FirstAPIdotnet7.ViewModel
+﻿namespace FirstAPIdotnet7.Application.ViewModel
 {
     public class EmployeeViewModel
     {

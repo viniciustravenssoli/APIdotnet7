@@ -21,7 +21,24 @@ namespace FirstAPIdotnet7.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("FirstAPIdotnet7.Model.Employee", b =>
+            modelBuilder.Entity("FirstAPIdotnet7.Domain.Model.Company", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Companies");
+                });
+
+            modelBuilder.Entity("FirstAPIdotnet7.Domain.Model.Employee", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -37,7 +54,6 @@ namespace FirstAPIdotnet7.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("photo")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");

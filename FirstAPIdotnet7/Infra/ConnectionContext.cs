@@ -1,4 +1,4 @@
-﻿using FirstAPIdotnet7.Model;
+﻿using FirstAPIdotnet7.Domain.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
 
@@ -14,6 +14,8 @@ namespace FirstAPIdotnet7.Infra
         }
 
         public DbSet<Employee> Employees { get; set; }
+
+        public DbSet<Company> Companies { get; set; }
 
     }
 }

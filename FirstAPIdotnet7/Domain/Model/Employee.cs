@@ -1,9 +1,13 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FirstAPIdotnet7.Model
+namespace FirstAPIdotnet7.Domain.Model
 {
     public class Employee
     {
+        public Employee()
+        {
+        }
+
         public Employee(string name, int age, string photo)
         {
             this.name = name ?? throw new ArgumentNullException(nameof(name));
